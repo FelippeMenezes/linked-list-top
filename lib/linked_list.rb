@@ -1,0 +1,3 @@
+class Linked_list
+
+end
