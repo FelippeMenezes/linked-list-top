@@ -9,3 +9,6 @@ p linked_list1
 
 linked_list1.append('last')
 p linked_list1
+
+linked_list1.prepend('first')
+p linked_list1
