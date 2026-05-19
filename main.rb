@@ -6,3 +6,6 @@ p node1
 
 linked_list1 = Linked_list.new
 p linked_list1
+
+linked_list1.append('last')
+p linked_list1
