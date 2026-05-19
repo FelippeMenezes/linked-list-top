@@ -22,5 +22,16 @@ class Linked_list
     new_node = Node.new(value, @head)
     @head = new_node
   end
-  
+
+  def size
+    counter = 0
+    current_node = @head
+
+    until current_node.nil?
+      counter += 1
+      current_node = current_node.next_node
+    end
+    
+    counter
+  end
 end
