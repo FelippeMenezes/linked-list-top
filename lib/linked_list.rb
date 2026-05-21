@@ -21,6 +21,7 @@ class Linked_list
   def prepend(value)
     new_node = Node.new(value, @head)
     @head = new_node
+    @tail = new_node if @tail.nil?
   end
 
   def size
@@ -64,5 +65,16 @@ class Linked_list
     end
 
     current_node.value
+  end
+
+  def pop
+    return nil if @head.nil?
+
+    removed_value = @head.value
+    @head = @head.next_node
+
+    @tail = nil if @head.nil?
+
+    removed_value
   end
 end
