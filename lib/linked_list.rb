@@ -50,4 +50,19 @@ class Linked_list
       return @tail.value
     end
   end
+
+  def at(index)
+    return nil if index < 0
+
+    current_node = @head
+
+    return nil if current_node.nil?
+
+    index.times do
+      current_node = current_node.next_node
+      return nil if current_node.nil?
+    end
+
+    current_node.value
+  end
 end

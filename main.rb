@@ -18,3 +18,9 @@ p linked_list1.size
 p linked_list1.head
 
 p linked_list1.tail
+
+p linked_list1.at(25)
+
+p linked_list1.at(1)
+
+
