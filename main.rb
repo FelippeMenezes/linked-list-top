@@ -39,3 +39,8 @@ p linked_list_nil.contains?('middle')
 p linked_list2.index('middle')
 p linked_list_nil.index('middle')
 
+p linked_list2.to_s
+p linked_list_nil.to_s
+
+
+

@@ -99,4 +99,18 @@ class Linked_list
 
     nil
   end
+
+  def to_s
+    return "" if @head.nil?
+
+    current_node = @head
+    elements = []
+
+    until current_node.nil?
+      elements << "( #{current_node.value} )"
+      current_node = current_node.next_node
+    end
+    
+    elements.join(" -> ") + " -> nil"
+  end
 end
