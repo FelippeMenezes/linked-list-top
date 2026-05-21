@@ -42,5 +42,8 @@ p linked_list_nil.index('middle')
 p linked_list2.to_s
 p linked_list_nil.to_s
 
-
-
+linked_list2.insert_at(10, 'after_middle')
+linked_list2.insert_at(2, 'after_middle')
+p linked_list2.to_s
+linked_list2.insert_at(1, ['after_first', 'before_middle'])
+p linked_list2.to_s

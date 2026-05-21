@@ -110,7 +110,33 @@ class Linked_list
       elements << "( #{current_node.value} )"
       current_node = current_node.next_node
     end
-    
+
     elements.join(" -> ") + " -> nil"
   end
+
+  def insert_at(index, values)
+    values = Array(values)
+    current_size = size
+
+    return puts "No index found in this list." if index < 0 || index > current_size
+    return if values.empty?
+
+    if index == 0
+      values.reverse_each { |val| prepend(val) }
+    else
+      previous_node = @head
+      (index - 1).times { previous_node = previous_node.next_node }
+      after_node = previous_node.next_node
+
+      values.each do |val|
+        new_node = Node.new(val)
+        previous_node.next_node = new_node
+        previous_node = new_node
+      end
+
+      previous_node.next_node = after_node
+      @tail = previous_node if after_node.nil?
+    end
+  end
+
 end
