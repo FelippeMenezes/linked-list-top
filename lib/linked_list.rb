@@ -89,12 +89,14 @@ class Linked_list
 
   def index(value)
     current_node = @head
-    index = 0
+    i = 0
+
     until current_node.nil?
-      return index if current_node.value == value
+      return i if current_node.value == value
       current_node = current_node.next_node
-      index += 1
+      i += 1
     end
+
     nil
   end
 end

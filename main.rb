@@ -36,4 +36,6 @@ linked_list2.prepend('first')
 p linked_list2.contains?('middle')
 p linked_list_nil.contains?('middle')
 
+p linked_list2.index('middle')
+p linked_list_nil.index('middle')
 
