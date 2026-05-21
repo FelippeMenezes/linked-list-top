@@ -47,3 +47,6 @@ linked_list2.insert_at(2, 'after_middle')
 p linked_list2.to_s
 linked_list2.insert_at(1, ['after_first', 'before_middle'])
 p linked_list2.to_s
+
+linked_list2.remove_at(4)
+p linked_list2.to_s

@@ -125,7 +125,9 @@ class Linked_list
       values.reverse_each { |val| prepend(val) }
     else
       previous_node = @head
-      (index - 1).times { previous_node = previous_node.next_node }
+      (index - 1).times do
+        previous_node = previous_node.next_node
+      end
       after_node = previous_node.next_node
 
       values.each do |val|
@@ -139,4 +141,25 @@ class Linked_list
     end
   end
 
+  def remove_at(index)
+    current_size = size
+    return puts "No index found in this list." if index < 0 || index >= current_size
+
+    if index == 0
+      removed_node = @head
+      @head = @head.next_node
+      @tail = nil if @head.nil?
+    else
+      previous_node = @head
+      (index - 1).times do
+        previous_node = previous_node.next_node
+      end
+
+      removed_node = previous_node.next_node
+      previous_node.next_node = removed_node.next_node
+      @tail = previous_node if removed_node == @tail
+    end
+
+    removed_node.value
+  end
 end
