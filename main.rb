@@ -14,3 +14,7 @@ linked_list1.prepend('first')
 p linked_list1
 
 p linked_list1.size
+
+p linked_list1.head
+
+

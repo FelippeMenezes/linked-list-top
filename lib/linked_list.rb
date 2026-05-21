@@ -31,7 +31,15 @@ class Linked_list
       counter += 1
       current_node = current_node.next_node
     end
-    
+
     counter
+  end
+
+  def head
+    if @head == nil
+      return nil
+    else
+      return @head.value
+    end
   end
 end
