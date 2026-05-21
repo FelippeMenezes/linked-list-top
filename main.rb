@@ -31,5 +31,9 @@ p linked_list2.at(1)
 
 p linked_list_nil.pop
 p linked_list2.pop
+linked_list2.prepend('first')
+
+p linked_list2.contains?('middle')
+p linked_list_nil.contains?('middle')
 
 
