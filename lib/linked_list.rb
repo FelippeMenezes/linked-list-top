@@ -42,4 +42,12 @@ class Linked_list
       return @head.value
     end
   end
+
+  def tail
+    if @tail == nil
+      return nil
+    else
+      return @tail.value
+    end
+  end
 end

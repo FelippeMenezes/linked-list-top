@@ -16,3 +16,5 @@ p linked_list1
 p linked_list1.size
 
 p linked_list1.head
+
+p linked_list1.tail
