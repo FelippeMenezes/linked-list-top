@@ -4,8 +4,8 @@ require_relative 'lib/linked_list'
 node1 = Node.new
 p node1
 
-linked_list_nil = Linked_list.new
-linked_list2 = Linked_list.new
+linked_list_nil = LinkedList.new
+linked_list2 = LinkedList.new
 p linked_list2
 
 linked_list2.append('middle')
@@ -50,3 +50,14 @@ p linked_list2.to_s
 
 linked_list2.remove_at(4)
 p linked_list2.to_s
+
+list = LinkedList.new
+
+list.append('dog')
+list.append('cat')
+list.append('parrot')
+list.append('hamster')
+list.append('snake')
+list.append('turtle')
+
+p list.to_s
