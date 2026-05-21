@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# clas for linkedList
 class LinkedList
   attr_accessor :head, :tail
 
@@ -37,23 +40,19 @@ class LinkedList
   end
 
   def head
-    if @head == nil
-      return nil
-    else
-      return @head.value
-    end
+    return nil if @head.nil?
+
+    @head.value
   end
 
   def tail
-    if @tail == nil
-      return nil
-    else
-      return @tail.value
-    end
+    return nil if @tail.nil?
+
+    @tail.value
   end
 
   def at(index)
-    return nil if index < 0
+    return nil if index.negative?
 
     current_node = @head
 
@@ -82,6 +81,7 @@ class LinkedList
     current_node = @head
     until current_node.nil?
       return true if current_node.value == value
+
       current_node = current_node.next_node
     end
     false
@@ -93,6 +93,7 @@ class LinkedList
 
     until current_node.nil?
       return i if current_node.value == value
+
       current_node = current_node.next_node
       i += 1
     end
@@ -101,7 +102,7 @@ class LinkedList
   end
 
   def to_s
-    return "" if @head.nil?
+    return '' if @head.nil?
 
     current_node = @head
     elements = []
@@ -111,17 +112,17 @@ class LinkedList
       current_node = current_node.next_node
     end
 
-    elements.join(" -> ") + " -> nil"
+    "#{elements.join(' -> ')} -> nil"
   end
 
   def insert_at(index, values)
     values = Array(values)
     current_size = size
 
-    return puts "No index found in this list." if index < 0 || index > current_size
+    return puts 'No index found in this list.' if index.negative? || index > current_size
     return if values.empty?
 
-    if index == 0
+    if index.zero?
       values.reverse_each { |val| prepend(val) }
     else
       previous_node = @head
@@ -143,9 +144,9 @@ class LinkedList
 
   def remove_at(index)
     current_size = size
-    return puts "No index found in this list." if index < 0 || index >= current_size
+    return puts 'No index found in this list.' if index.negative? || index >= current_size
 
-    if index == 0
+    if index.zero?
       removed_node = @head
       @head = @head.next_node
       @tail = nil if @head.nil?

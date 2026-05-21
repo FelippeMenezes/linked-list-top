@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# class for node
 class Node
   attr_accessor :value, :next_node
 

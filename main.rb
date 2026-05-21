@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'lib/node'
 require_relative 'lib/linked_list'
 
@@ -45,7 +47,7 @@ p linked_list_nil.to_s
 linked_list2.insert_at(10, 'after_middle')
 linked_list2.insert_at(2, 'after_middle')
 p linked_list2.to_s
-linked_list2.insert_at(1, ['after_first', 'before_middle'])
+linked_list2.insert_at(1, %w[after_first before_middle])
 p linked_list2.to_s
 
 linked_list2.remove_at(10)
