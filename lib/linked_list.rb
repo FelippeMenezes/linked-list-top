@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# clas for linkedList
+# class for linkedList
 class LinkedList
   attr_accessor :head, :tail
 
@@ -24,7 +24,7 @@ class LinkedList
   def prepend(value)
     new_node = Node.new(value, @head)
     @head = new_node
-    @tail = new_node if @tail.nil?
+    @tail = new_node
   end
 
   def size
